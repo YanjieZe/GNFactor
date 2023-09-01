@@ -28,7 +28,7 @@ Multi-Task Real Robot Learning with <br> Generalizable Neural Feature Fields</h1
 <h3 align="center">
   <a href="https://yanjieze.com/GNFactor/"><strong>Project Page</strong></a>
   |
-  <a href=""><strong>arXiv</strong></a>
+  <a href="https://arxiv.org/abs/2308.16891"><strong>arXiv</strong></a>
 </h3>
 
 <div align="center">
