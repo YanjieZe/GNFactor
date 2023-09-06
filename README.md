@@ -38,6 +38,10 @@ Multi-Task Real Robot Learning with <a>G</a>eneralizable <a>N</a>eural Feature <
 </div>
 
 
+
+https://github.com/YanjieZe/GNFactor/assets/59699800/0ad86126-ad24-4291-a4ba-6bb591d9934a
+
+
 # 💻 Installation
 
 See [INSTALL.md](INSTALL.md) for installation instructions. 
