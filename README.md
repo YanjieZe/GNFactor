@@ -2,7 +2,7 @@
 
   <h1 align="center"><a href="https://yanjieze.com/GNFactor/">GNFactor</a>:
 Multi-Task Real Robot Learning with <a>G</a>eneralizable <a>N</a>eural Feature <a>F</a>ields</h1>
-<h2 align="center">CoRL 2023 <a>Oral</a></h2>
+<h2 align="center">CoRL 2023 <a href="https://openreview.net/forum?id=b1tl3aOt2R2">Oral</a></h2>
   <p align="center">
     <a><strong>Yanjie Ze*</strong></a>
     ·
