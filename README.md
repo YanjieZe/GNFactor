@@ -44,9 +44,9 @@ https://github.com/YanjieZe/GNFactor/assets/59699800/0ad86126-ad24-4291-a4ba-6bb
 
 # 💻 Installation
 
-See [INSTALL.md](INSTALL.md) for installation instructions. 
+See [INSTALL.md](docs/INSTALL.md) for installation instructions. 
 
-See [ERROR_CATCH.md](ERROR_CATCH.md) for error catching I personally encountered during installation.
+See [ERROR_CATCH.md](docs/ERROR_CATCH.md) for error catching I personally encountered during installation.
 
 **Note**: Due to the usage of `RLBench` and its physics engine `PyRep`, a lof of potential bugs during installing the environment could occur. These could be hard to address for people that are not familiar with the environment. If you encounter any problems during installation, please feel free to open an issue.
 
