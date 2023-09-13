@@ -37,9 +37,8 @@ Multi-Task Real Robot Learning with <a>G</a>eneralizable <a>N</a>eural Feature <
   <img src="./docs/gnfactor_method.png" alt="Logo" width="100%">
 </div>
 
-
-
 https://github.com/YanjieZe/GNFactor/assets/59699800/0ad86126-ad24-4291-a4ba-6bb591d9934a
+
 
 
 # 💻 Installation
@@ -72,7 +71,7 @@ We provide scripts to generate demonstrations, train and evaluate policies, and 
 We also provide the results (*.csv files, 3 seeds) of our paper in `GNFactor_results/`. Researchers could directly compare their own algorithm with these results under the similar setting.
 
 
-## Generate Demonstrations
+## 🦉 Generate Demonstrations
 In this work, we select 10 challenging tasks from RLBench:
 ```bash
 tasks=[close_jar,open_drawer,sweep_to_dustpan_of_size,meat_off_grill,turn_tap,slide_block_to_color_target,put_item_in_drawer,reach_and_drag,push_buttons,stack_blocks]
@@ -92,7 +91,7 @@ For example, running `bash scripts/gen_demonstrations.sh close_jar` will generat
 To generate demonstrations for all 10 tasks, just simply run this command for different tasks.
 
 
-## Training and Evaluation
+## 📈 Training and Evaluation
 We use wandb to log some curves and visualizations. Login to wandb before running the scripts.
 ```bash
 wandb login
@@ -115,13 +114,11 @@ bash scripts/train_and_eval_with_one_gpu.sh PERACT_BC
 ```
 But this means the batch size is 1 and the results would be worse.
 
-To save the evaluation videos, set `cinematic_recorder.enabled=True` in `conf/eval.yaml`.
+
+Configurations for training and evaluation are in `GNFactor/conf/`. You could change the parameters in these files for your own setting.
 
 
-All configurations for training and evaluation are in `GNFactor/conf/`. You could change the parameters in these files for your own setting.
-
-
-## Analyze Evaluation Results
+## 📊 Analyze Evaluation Results
 For the users' convenience, we provide the results (`*.csv` files, 3 seeds) of our paper in `GNFactor_results/`.
 
 We also provide a python script `scripts/compute_results.py` to compute the average success rates from the `*.csv` files (generated during the evaluation). An example to compute success rates given our provided csv files:
@@ -134,6 +131,19 @@ In our main paper, we only report the results of the **last** checkpoint for fai
 python scripts/compute_results.py --file_paths GNFactor_results/0.csv GNFactor_results/1.csv GNFactor_results/2.csv --method best
 ```
 
+## 🆕 Pre-Trained Checkpoints
+We provide the pre-trained checkpoints for users' convenience. You could download from the google drive [here](https://drive.google.com/file/d/1UOP9Zftk7zsfQTBVQvbm7GKz_V3-DaSx/view?usp=sharing). Then, unzip this file into `REPO_DIR/GNFactor/logs/`. The overall file structure should be like this:
+```
+docs/
+GNFactor/
+    logs/
+        GNFACTOR_BC_released/ # our provided files
+GNFactor_results/
+```
+After this, use our script to evaluate the checkpoints (remember to generate the evaluation demonstrations first):
+```bash
+bash scripts/eval.sh GNFACTOR_BC released
+```
 
 # 🏷️ License
 This repository is released under the MIT license. See [LICENSE](LICENSE) for additional details.

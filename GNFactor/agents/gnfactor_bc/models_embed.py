@@ -47,8 +47,7 @@ class GeneralizableNeRFEmbedNet(torch.nn.Module):
         )
         self.use_code = conf.use_code  # Positional encoding
         self.use_code_viewdirs = conf.use_code_viewdirs
-        # regluarization on positional encoding
-        self.use_freenerf = conf.use_freenerf
+
 
         # Enable view directions
         self.use_viewdirs = conf.use_viewdirs
@@ -314,10 +313,6 @@ class GeneralizableNeRFEmbedNet(torch.nn.Module):
                 if self.use_code and not self.use_code_viewdirs:
                     # Positional encoding (no viewdirs)
                     z_feature = self.code(z_feature)
-                    if self.use_freenerf:
-                        import ipdb; ipdb.set_trace()
-                        z_feature = z_feature[int(t/T * L +3):] = 0
-
 
                 if self.use_viewdirs:
                     # * Encode the view directions

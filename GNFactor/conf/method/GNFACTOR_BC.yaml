@@ -111,7 +111,6 @@ neural_renderer:
   ret_last_feat: False
   use_code: True
   use_code_viewdirs: False
-  use_freenerf: False
   use_xyz: True
 
   # sampling

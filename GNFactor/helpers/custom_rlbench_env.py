@@ -374,14 +374,7 @@ class CustomMultiTaskRLBenchEnv(MultiTaskRLBenchEnv):
             self._set_new_task()
             self._episodes_this_task = 0
         self._episodes_this_task += 1
-
         self._i = 0
-        # super(CustomMultiTaskRLBenchEnv, self).reset()
-
-        # if variation_number == -1:
-        #     self._task.sample_variation()
-        # else:
-        #     self._task.set_variation(variation_number)
 
         self._task.set_variation(-1)
         d = self._task.get_demos(
@@ -390,7 +383,6 @@ class CustomMultiTaskRLBenchEnv(MultiTaskRLBenchEnv):
         self._task.set_variation(d.variation_number)
         _, obs = self._task.reset_to_demo(d)
         self._lang_goal = self._task.get_task_descriptions()[0] if novel_command is None else novel_command
-
         self._previous_obs_dict = self.extract_obs(obs)
         self._record_current_episode = (
                 self.eval and self._episode_index % self._record_every_n == 0)

@@ -43,6 +43,9 @@ def main(file_paths, method):
         # Select the checkpoint based on the method
         if method == 'best':
             selected_return = avg_return.max()
+            # get the index of the best checkpoint
+            best_checkpoint = avg_return.idxmax()
+            print(f"Best checkpoint for {file_path}: {best_checkpoint}, with average return: {selected_return:.2f}")
         elif method == 'last':
             selected_return = avg_return.iloc[-1]
         else:
