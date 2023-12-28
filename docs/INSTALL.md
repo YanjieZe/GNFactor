@@ -105,7 +105,11 @@ pip install packaging==21.3 dotmap pyhocon wandb chardet opencv-python-headless 
 # 10 install odise
 Install xformers (this version is a must to avoid errors from detectron2)
 ```
-pip install xformers==0.0.18 
+pip install xformers==0.0.18
+```
+Install Stable Diffusion
+```
+pip install stable-diffusion-sdkit==2.1.3
 ```
 Install detectron2:
 ```
